@@ -31,6 +31,7 @@ let g:pymode_rope = 0
 
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Use the right side of the screen
 let g:buffergator_viewport_split_policy = 'R'
 " I want my own keymappings...

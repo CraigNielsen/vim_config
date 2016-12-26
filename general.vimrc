@@ -28,6 +28,8 @@ set cursorline
 
 set showcmd		" display incomplete commands
 
+"disable complettion previews
+set completeopt-=preview
 "if has('mouse')
 "  set mouse=a
 "endif
@@ -121,4 +123,4 @@ autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore
 " clipboard
 set clipboard=unnamedplus
 
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone
