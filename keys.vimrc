@@ -55,16 +55,17 @@ nmap <silent><LEFT> :cprev<CR>
 
 "rename
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+vnoremap <leader>mr :s//g<Left><Left>
 " window keys
-nnoremap <Leader>w< <C-w><
-nnoremap <Leader>w> <C-w>>
-nnoremap <Leader>w- <C-w>-
-nnoremap <Leader>w+ <C-w>+
-nnoremap <Leader>ws :split<CR>
-nnoremap <Leader>wv :vsplit<CR>
-nnoremap <Leader>wx :close<CR>
+nnoremap <leader>w< <c-w><
+nnoremap <leader>w> <c-w>>
+nnoremap <leader>w- <c-w>-
+nnoremap <leader>w+ <c-w>+
+nnoremap <leader>ws :split<cr>
+nnoremap <leader>wv :vsplit<cr>
+nnoremap <leader>wx :close<cr>
 
-nnoremap <Leader>w <c-w>
+nnoremap <leader>w <c-w>
 
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
