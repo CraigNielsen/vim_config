@@ -158,8 +158,8 @@ let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-tab>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<tab>'
 
-let g:UltiSnipsExpandTrigger = "<C-y>"
-let g:UltiSnipsJumpForwardTrigger = "<C-y>"
+let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-b>"
 nnoremap <Leader>g :YcmCompleter GoToDefinition<CR>
 nmap <Leader>tg yiw:CtrlP<CR><C-\>w
