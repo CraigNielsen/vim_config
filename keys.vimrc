@@ -12,6 +12,7 @@ nmap <Leader>mg :Gstatus<CR>
 " l2 == leader2
 " l2 Test This
 map <leader>mtt :!/home/craig/vim_projects/testthis.sh %:p<CR>
+map <leader>mta :!/home/craig/vim_projects/testall.sh %:p<CR>
 
 " hard mode config
 nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
