@@ -26,8 +26,11 @@ let g:pymode_line_ignore = "E501"
 let g:pymode_run_bind = '<SHIFT><C-r>'
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
+
 "rope
-let g:pymode_rope = 0
+let g:pymode_rope = 1
+let g:pymode_rope_autoimport=1
+
 "jedi vim
 
 let g:jedi#auto_vim_configuration = 0
@@ -41,7 +44,7 @@ let g:jedi#goto_assignments_command = "<leader>pa"
 let g:jedi#goto_definitions_command = "<leader>pd"
 let g:jedi#documentation_command = "<leader>pk"
 let g:jedi#usages_command = "<leader>pu"
-let g:jedi#rename_command = "<leader>pr"
+let g:jedi#rename_command = "<leader>r"
 
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'

@@ -50,6 +50,7 @@ nnoremap <leader>bn :BuffergatorMruCycleNext<cr>
 nnoremap <leader>bl :BuffergatorOpen<cr>
 " To open a new empty buffer
 nnoremap <leader>T :enew<cr>
+nnoremap <leader>mo :bro o<cr>q
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nnoremap <leader>bq :bp <BAR> bd #<cr>
@@ -62,8 +63,10 @@ nnoremap <silent><F3> :Ack<CR>
 nmap <silent><RIGHT> :cnext<CR>
 nmap <silent><LEFT> :cprev<CR>
 
+"import
+nnoremap <leader>mi :PymodeRopeAutoImport<CR>
 "rename
-nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+"nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 vnoremap <leader>mr :s//g<Left><Left>
 " window keys
 nnoremap <leader>w< <c-w><
