@@ -3,7 +3,7 @@ syntax enable
 filetype plugin indent on
 
 set hlsearch
-
+set spell spelllang=en_gb
 set number
 
 " allow backspacing over everything in insert mode

@@ -12,9 +12,9 @@ let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
  if ($PWD == '/home/craig/git_repos/reps')
    echo "working in pwd: /home/craig/git_repos/reps"
-   echo $PWD .'website-service/node_modules/.bin/eslint'
+   echo $PWD .'/website-service/node_modules/.bin/eslint'
 
-   let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+   let g:neomake_javascript_eslint_exe = $PWD .'/website-service/node_modules/.bin/eslint'
 endif
 " autopep8
 let g:autopep8_ignore="E501"
@@ -28,6 +28,20 @@ let g:pymode_run_bind = '<SHIFT><C-r>'
 let g:user_emmet_leader_key='<C-Z>'
 "rope
 let g:pymode_rope = 0
+"jedi vim
+
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#completions_enabled = 0
+let g:jedi#completions_command = ""
+let g:jedi#show_call_signatures = "1"
+
+let g:jedi#goto_assignments_command = "<leader>pa"
+let g:jedi#goto_definitions_command = "<leader>pd"
+let g:jedi#documentation_command = "<leader>pk"
+let g:jedi#usages_command = "<leader>pu"
+let g:jedi#rename_command = "<leader>pr"
 
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'

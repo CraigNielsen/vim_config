@@ -17,6 +17,14 @@ map <leader>mta :!/home/craig/vim_projects/testall.sh %:p<CR>
 " hard mode config
 nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
 
+nmap <Leader>cp :let @+ = expand("%")<CR>
+" relative path
+":let @+ = expand("%")
+" full path
+":let @+ = expand("%:p")
+" just filename
+":let @+ = expand("%:t")
+
 " buffer keys
 nnoremap <Leader>bb :b#<CR>
 "nnoremap <Leader>bn :bn<CR>
@@ -118,12 +126,12 @@ set showmode
 nmap <Leader>, <Plug>SneakPrevious
 
 " camelCase motion settings
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
+"map <silent> w <Plug>CamelCaseMotion_w
+"map <silent> b <Plug>CamelCaseMotion_b
+"map <silent> e <Plug>CamelCaseMotion_e
+"sunmap w
+"sunmap b
+"sunmap e
 
 " start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
