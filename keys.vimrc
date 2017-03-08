@@ -16,6 +16,19 @@ map <leader>mta :!/home/craig/vim_projects/testall.sh %:p<CR>
 
 " hard mode config
 nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
+" dunder a word
+nnoremap <Leader>wd ciw__<Esc>pa__  <Esc>
+" first spell reccomended spelling next spelling fix
+nnoremap <Leader>sf z=1 <CR>
+" go to errors eslint
+nnoremap <Leader>mk :lne<CR>
+nnoremap <Leader>mj :lpr<CR>
+
+" swap function parameters
+"map <Leader>ms di,<CR>
+map <Leader>ms di,pldwdwF,i p
+
+nmap <F8> :TagbarToggle<CR>
 
 nmap <Leader>cp :let @+ = expand("%")<CR>
 " relative path
@@ -50,7 +63,7 @@ nnoremap <leader>bn :BuffergatorMruCycleNext<cr>
 nnoremap <leader>bl :BuffergatorOpen<cr>
 " To open a new empty buffer
 nnoremap <leader>T :enew<cr>
-nnoremap <leader>mo :bro o<cr>q
+nnoremap <leader>mo :bro o<cr>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nnoremap <leader>bq :bp <BAR> bd #<cr>
@@ -59,7 +72,7 @@ nnoremap <leader>bq :bp <BAR> bd #<cr>
 let g:lt_location_list_toggle_map = '<leader>c'
 let g:lt_quickfix_list_toggle_map = '<leader>v'
 
-nnoremap <silent><F3> :Ack<CR>
+nnoremap <silent><F3> :Ack!<CR>
 nmap <silent><RIGHT> :cnext<CR>
 nmap <silent><LEFT> :cprev<CR>
 
@@ -75,7 +88,7 @@ nnoremap <leader>w- <c-w>-
 nnoremap <leader>w+ <c-w>+
 nnoremap <leader>ws :split<cr>
 nnoremap <leader>wv :vsplit<cr>
-nnoremap <leader>wx :close<cr>
+nnoremap <leader>q :close<cr>
 
 nnoremap <leader>w <c-w>
 
@@ -97,14 +110,14 @@ nnoremap <F6> :source $HOME/.config/nvim/init.vim<CR>
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <Leader><F5> :NERDTreeFind<CR>
 nnoremap <F7> :UndotreeToggle<CR>
-nnoremap <F8> :Geeknote<CR>
+"nnoremap <F8> :Geeknote<CR>
 " indent whole file according to syntax rules
 noremap <F9> gg=G
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
-" Don't use Ex mode, use Q for formatting
+" Don't use Ex mode use Q for formatting
 " map Q gq
 
 " relative line numbers
@@ -145,8 +158,8 @@ nmap ga <Plug>(EasyAlign)
 
 " easy motion
 " <Leader>f{char} to move to {char}
-map  <Leader>s <Plug>(easymotion-bd-f)
-nmap <Leader>s <Plug>(easymotion-overwin-f)
+"map  <Leader>s <Plug>(easymotion-bd-f)
+"nmap <Leader>s <Plug>(easymotion-overwin-f)
 "
 "" s{char}{char} to move to {char}{char}
 map  <Leader>f <Plug>(easymotion-bd-f2)

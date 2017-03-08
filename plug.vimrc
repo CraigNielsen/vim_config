@@ -28,6 +28,7 @@ Plug 'vim-utils/vim-husk'
 
 " editing
 Plug 'Valloric/ListToggle'
+Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'wikitopian/hardmode'
