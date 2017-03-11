@@ -40,6 +40,7 @@ nmap <Leader>cp :let @+ = expand("%")<CR>
 
 " buffer keys
 nnoremap <Leader>bb :b#<CR>
+nnoremap <Leader>b <CR>
 "nnoremap <Leader>bn :bn<CR>
 "nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>bf :bf<CR>
@@ -112,7 +113,7 @@ nnoremap <Leader><F5> :NERDTreeFind<CR>
 nnoremap <F7> :UndotreeToggle<CR>
 "nnoremap <F8> :Geeknote<CR>
 " indent whole file according to syntax rules
-noremap <F9> gg=G
+noremap <F9> :PymodeLintAuto
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo
 " so that you can undo CTRL-U after inserting a line break.
