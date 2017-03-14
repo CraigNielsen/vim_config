@@ -10,11 +10,17 @@ let g:neomake_open_list = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
+ if ($PWD == '/home/craig/git_repos/psychicjenha')
+   echo "working in pwd: /home/craig/git_repos/psychicjenha"
+   echo $PWD .'/frontend/node_modules/.bin/eslint'
+   let g:neomake_javascript_eslint_exe = $PWD .'/frontend/node_modules/.bin/eslint'
+   let g:fixmyjs_executable = $PWD .'/frontend/node_modules/.bin/eslint'
+endif
  if ($PWD == '/home/craig/git_repos/reps')
    echo "working in pwd: /home/craig/git_repos/reps"
    echo $PWD .'/website-service/node_modules/.bin/eslint'
-
    let g:neomake_javascript_eslint_exe = $PWD .'/website-service/node_modules/.bin/eslint'
+   let g:fixmyjs_executable = $PWD .'/website-service/node_modules/.bin/eslint'
 endif
 " autopep8
 let g:autopep8_ignore="E501"
@@ -26,6 +32,11 @@ let g:pymode_line_ignore = "E501"
 let g:pymode_run_bind = '<SHIFT><C-r>'
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
+" fix my javascript
+let g:fixmyjs_engine = 'eslint'
+let g:fixmyjs_rc_path = '~/.eslintrc'
+"noremap <Leader><Leader>f :Fixmyjs<CR>
+"let g:fixmyjs_use_local = 1
 
 "rope
 let g:pymode_rope = 1

@@ -56,6 +56,7 @@ Plug 'wavded/vim-stylus'
 
 " javascript
 Plug 'maksimr/vim-jsbeautify'
+Plug 'ruanyl/vim-fixmyjs'
 "Plug 'guileen/vim-node-dict'
 "Plug 'moll/vim-node'
 "Plug 'othree/yajs.vim'

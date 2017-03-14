@@ -114,6 +114,7 @@ nnoremap <F7> :UndotreeToggle<CR>
 "nnoremap <F8> :Geeknote<CR>
 " indent whole file according to syntax rules
 noremap <F9> :PymodeLintAuto
+noremap <Leader><F9> gg=G<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo
 " so that you can undo CTRL-U after inserting a line break.
