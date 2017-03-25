@@ -33,8 +33,8 @@ let g:pymode_run_bind = '<SHIFT><C-r>'
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
 " fix my javascript
-let g:fixmyjs_engine = 'eslint'
-let g:fixmyjs_rc_path = '~/.eslintrc'
+let g:fixmyjs_engine = 'fixmyjs'
+"let g:fixmyjs_rc_path = '~/.eslintrc'
 "noremap <Leader><Leader>f :Fixmyjs<CR>
 "let g:fixmyjs_use_local = 1
 
