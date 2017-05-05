@@ -78,8 +78,9 @@ let g:buffergator_viewport_split_policy = 'R'
 let g:buffergator_suppress_keymaps = 1
 
 "set t_Co=256
-"set termguicolors
+set termguicolors
 set background=dark
+syntax enable
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
 let g:gruvbox_hls_cursor='orange'
