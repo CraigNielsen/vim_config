@@ -1,7 +1,7 @@
 filetype plugin indent on
 
-let g:python3_host_prog = '/home/craig/.pyenv/versions/neovim3/bin/python'
-let g:python_host_prog = '/home/craig/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/craig.ferguson/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/craig.ferguson/.pyenv/versions/neovim2/bin/python'
 " neomake config
 autocmd! BufWritePost,BufEnter * Neomake
 " autocmd BufLeave * QFix
@@ -30,6 +30,7 @@ let g:pymode_lint_on_write = 1
 let g:pymode_lint_on_fly = 1
 let g:pymode_line_ignore = "E501"
 let g:pymode_run_bind = '<SHIFT><C-r>'
+let g:pymode_rope_lookup_project = 0
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
 " fix my javascript
@@ -40,7 +41,7 @@ let g:fixmyjs_engine = 'fixmyjs'
 
 "rope
 let g:pymode_rope = 1
-let g:pymode_rope_autoimport=1
+let g:pymode_rope_autoimport=0
 
 "jedi vim
 
@@ -55,7 +56,7 @@ let g:jedi#goto_assignments_command = "<leader>pa"
 let g:jedi#goto_definitions_command = "<leader>pd"
 let g:jedi#documentation_command = "<leader>pk"
 let g:jedi#usages_command = "<leader>pu"
-let g:jedi#rename_command = "<leader>r"
+let g:jedi#rename_command = "<leader>mr"
 
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
