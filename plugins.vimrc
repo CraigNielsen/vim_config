@@ -33,6 +33,8 @@ endif
    echo $PWD .'setting python to virtual python'
    let g:ycm_python_binary_path = 'home/craig/.pyenv/versions/3.4.3/envs/crawling/bin/python3.4'
 endif
+" auto close tags
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 " autopep8
 let g:autopep8_ignore="E501"
 " pymodelint:
