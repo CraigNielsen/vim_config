@@ -1,8 +1,17 @@
 filetype plugin indent on
 
+let g:python3_host_prog = '~/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '~/.pyenv/versions/neovim2/bin/python'
 " neomake config
 autocmd! BufWritePost,BufEnter * Neomake
+" autocmd BufLeave * QFix
 " autocmd BufLeave * QFix let g:neomake_place_signs = 1 let g:neomake_open_list = 0
+let g:neomake_place_signs = 1
+let g:neomake_open_list = 0
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
+" TODO: check if in project reps with find, then enable eslint
+"
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
