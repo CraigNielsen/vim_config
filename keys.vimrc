@@ -7,7 +7,7 @@ nnoremap <Leader>; ,
 nmap <Leader>j gj
 nmap <Leader>k gk
 " vim fugitive
-nmap <Leader>mg :Gstatus<CR>
+nmap <Leader>gs :Gstatus<CR>
 " craigs customs
 " l2 == leader2
 " l2 Test This
@@ -30,6 +30,7 @@ map <Leader>ms di,pldwdwF,i p
 
 nmap <F8> :TagbarToggle<CR>
 
+"copy current working dir to clipbaord path
 nmap <Leader>cp :let @+ = expand("%")<CR>
 " relative path
 ":let @+ = expand("%")
@@ -131,6 +132,8 @@ inoremap <C-U> <C-G>u<C-U>
 
 " relative line numbers
 nnoremap <Leader>3 :NumbersToggle<CR>
+nnoremap <Leader>mgk :GitGutterNextHunk<CR>
+nnoremap <Leader>mgj :GitGutterPrevHunk<CR>
 
 " remap number increment to C-s (C-a is already in use by tmux)
 " nnoremap <C-s> <C-a>
@@ -180,6 +183,7 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 "
 "comment
 map <c-_> <plug>NERDCommenterToggle
+let NERDTreeIgnore=['\.pyc$']
 "autopep8
 
 " " Move to word
@@ -195,7 +199,11 @@ let g:SuperTabDefaultCompletionType = '<tab>'
 let g:UltiSnipsExpandTrigger = "<C-j>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-b>"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
 nnoremap <Leader>g :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>mg :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>r :YcmCompleter GoToReferences<CR>
 nmap <Leader>tg yiw:CtrlP<CR><C-\>w
 nmap <Leader>tt /<C-R>"<CR>
 " neomake
@@ -217,5 +225,7 @@ autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<C-R>=UltiSnips#ExpandSnippet()"
 
+let g:gitgutter_max_signs=1200
 " colorizer
 nmap <Leader>tc :ColorToggle<CR>
+map <C-h> <C-W>h<C-W>_

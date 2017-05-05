@@ -1,10 +1,14 @@
 filetype plugin indent on
 
-let g:python3_host_prog = '/home/craig/.pyenv/versions/neovim3/bin/python'
-let g:python_host_prog = '/home/craig/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = $HOME .'/.pyenv/versions/neovim2/bin/python'
 " neomake config
 autocmd! BufWritePost,BufEnter * Neomake
 " autocmd BufLeave * QFix let g:neomake_place_signs = 1 let g:neomake_open_list = 0
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
+" TODO: check if in project reps with find, then enable eslint
+"
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
@@ -37,6 +41,7 @@ let g:pymode_lint_on_write = 1
 let g:pymode_lint_on_fly = 1
 let g:pymode_line_ignore = "E501"
 let g:pymode_run_bind = '<SHIFT><C-r>'
+let g:pymode_rope_lookup_project = 0
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
 " fix my javascript
@@ -48,7 +53,7 @@ noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx"
 "rope
 let g:pymode_rope = 1
-let g:pymode_rope_autoimport=1
+let g:pymode_rope_autoimport=0
 
 "jedi vim
 
@@ -63,7 +68,7 @@ let g:jedi#goto_assignments_command = "<leader>pa"
 let g:jedi#goto_definitions_command = "<leader>pd"
 let g:jedi#documentation_command = "<leader>pk"
 let g:jedi#usages_command = "<leader>pu"
-let g:jedi#rename_command = "<leader>r"
+let g:jedi#rename_command = "<leader>mr"
 " ycm strings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " silver searcher
@@ -74,13 +79,15 @@ let g:buffergator_viewport_split_policy = 'R'
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
 
+"set t_Co=256
 set termguicolors
 set background=dark
+syntax enable
+colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
 let g:gruvbox_hls_cursor='orange'
 let g:gruvbox_invert_selection='orange'
 
-colorscheme gruvbox
 " make background transparent
 " hi Normal ctermbg=NONE
 " hi EndOfBuffer ctermbg=NONE
