@@ -1,6 +1,8 @@
 filetype plugin indent on
 
 let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
+let g:jedi#force_py_version = 3
+"need to install an nvim with python 2 and python 3 for the aboce reason
 let g:python_host_prog = $HOME .'/.pyenv/versions/neovim2/bin/python'
 " neomake config
 autocmd! BufWritePost,BufEnter * Neomake
