@@ -54,6 +54,13 @@ nnoremap <Leader>bd :bd!<CR>
 " Looper buffers
 let g:buffergator_mru_cycle_loop = 0
 let g:buffergator_sort_regime = "mru"
+"indent
+"nnoremap <C-i> gg=G<C-o><C-o>
+"surrounding
+"nnoremap <Leader>sd vatc<div></div><Esc>cit<CR><CR><Esc>kP<C-i>
+nnoremap <Leader>sd vat:call UltiSnipsExpandTrigger()
+"insert next line into brackets
+nnoremap <C-I> i<CR><CR><Esc>jddkkPk<Esc>JJJ
 
 " Go to the previous buffer open
 nnoremap <leader>j :bp<cr>
@@ -187,6 +194,7 @@ let NERDTreeIgnore=['\.pyc$']
 let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-tab>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<tab>'
+
 
 let g:UltiSnipsExpandTrigger = "<C-j>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"

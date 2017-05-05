@@ -1,17 +1,12 @@
 filetype plugin indent on
 
-let g:python3_host_prog = '/Users/craig.ferguson/.pyenv/versions/neovim3/bin/python'
-let g:python_host_prog = '/Users/craig.ferguson/.pyenv/versions/neovim2/bin/python'
 " neomake config
 autocmd! BufWritePost,BufEnter * Neomake
-" autocmd BufLeave * QFix
-let g:neomake_place_signs = 1
-let g:neomake_open_list = 0
+" autocmd BufLeave * QFix let g:neomake_place_signs = 1 let g:neomake_open_list = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
  if ($PWD == '/home/craig/git_repos/psychicjenha')
-   echo "working in pwd: /home/craig/git_repos/psychicjenha"
    echo $PWD .'/frontend/node_modules/.bin/eslint'
    let g:neomake_javascript_eslint_exe = $PWD .'/frontend/node_modules/.bin/eslint'
    let g:fixmyjs_executable = $PWD .'/frontend/node_modules/.bin/eslint'
@@ -21,6 +16,14 @@ endif
    echo $PWD .'/website-service/node_modules/.bin/eslint'
    let g:neomake_javascript_eslint_exe = $PWD .'/website-service/node_modules/.bin/eslint'
    let g:fixmyjs_executable = $PWD .'/website-service/node_modules/.bin/eslint'
+endif
+
+
+
+ if ($PWD == '/home/craig/git_repos/sandbox/crawler')
+   echo "working in pwd: /home/craig/git_repos/sandbox/crawler"
+   echo $PWD .'setting python to virtual python'
+   let g:ycm_python_binary_path = 'home/craig/.pyenv/versions/3.4.3/envs/crawling/bin/python3.4'
 endif
 " autopep8
 let g:autopep8_ignore="E501"
@@ -35,10 +38,11 @@ let g:pymode_rope_lookup_project = 0
 let g:user_emmet_leader_key='<C-Z>'
 " fix my javascript
 let g:fixmyjs_engine = 'fixmyjs'
-"let g:fixmyjs_rc_path = '~/.eslintrc'
-"noremap <Leader><Leader>f :Fixmyjs<CR>
+let g:fixmyjs_rc_path = '~/.eslintrc'
+noremap <Leader><Leader>f :Fixmyjs<CR>
 "let g:fixmyjs_use_local = 1
-
+"vim-closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx"
 "rope
 let g:pymode_rope = 1
 let g:pymode_rope_autoimport=0
@@ -57,7 +61,8 @@ let g:jedi#goto_definitions_command = "<leader>pd"
 let g:jedi#documentation_command = "<leader>pk"
 let g:jedi#usages_command = "<leader>pu"
 let g:jedi#rename_command = "<leader>mr"
-
+" ycm strings
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 

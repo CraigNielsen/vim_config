@@ -27,6 +27,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-utils/vim-husk'
 
 " editing
+Plug 'alvan/vim-closetag'
 Plug 'Valloric/ListToggle'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
