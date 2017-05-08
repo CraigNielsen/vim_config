@@ -200,7 +200,7 @@ let g:UltiSnipsExpandTrigger = "<C-j>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-b>"
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
-let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
+"let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
 nnoremap <Leader>g :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>mg :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>r :YcmCompleter GoToReferences<CR>
