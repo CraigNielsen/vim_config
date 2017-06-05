@@ -32,17 +32,21 @@ endif
    echo $PWD .'setting python to virtual python'
    let g:ycm_python_binary_path = 'home/craig/.pyenv/versions/3.4.3/envs/crawling/bin/python3.4'
 endif
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4"
 " auto close tags
+"
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 " autopep8
-let g:autopep8_ignore="E501"
+"let g:autopep8_ignore="E501"
 " pymodelint:
 let g:pymode_lint_cwindow = 0
-let g:pymode_lint_ignore = "E501,W"
 let g:pymode_lint_on_write = 1
 let g:pymode_lint_on_fly = 1
+let g:pymode_lint_ignore = "E501"
 let g:pymode_run_bind = '<SHIFT><C-r>'
-let g:pymode_rope_lookup_project = 0
+"let g:pymode_rope_lookup_project = 0
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
 " fix my javascript
@@ -53,8 +57,8 @@ noremap <Leader><Leader>f :Fixmyjs<CR>
 "vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx"
 "rope
-let g:pymode_rope = 1
-let g:pymode_rope_autoimport=0
+"let g:pymode_rope = 1
+"let g:pymode_rope_autoimport=0
 
 "jedi vim
 
@@ -228,7 +232,7 @@ nnoremap <leader>bn :BuffergatorMruCycleNext<cr>
 nnoremap <leader>bl :BuffergatorOpen<cr>
 " To open a new empty buffer
 nnoremap <leader>T :enew<cr>
-nnoremap <leader>mo :bro o<cr>
+nnoremap <leader>mo :MRU<cr>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nnoremap <leader>bq :bp <BAR> bd #<cr>
