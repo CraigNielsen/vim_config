@@ -44,6 +44,7 @@ let g:pymode_lint_on_fly = 1
 let g:pymode_line_ignore = "E501"
 let g:pymode_run_bind = '<SHIFT><C-r>'
 let g:pymode_rope_lookup_project = 0
+let g:pymode_lint_ignore = "E501,W"
 "emmet irritation
 let g:user_emmet_leader_key='<C-Z>'
 " fix my javascript
