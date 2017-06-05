@@ -216,7 +216,7 @@ let g:buffergator_sort_regime = "mru"
 "nnoremap <Leader>sd vatc<div></div><Esc>cit<CR><CR><Esc>kP<C-i>
 nnoremap <Leader>sd vat:call UltiSnipsExpandTrigger()
 "insert next line into brackets
-nnoremap <C-I> i<CR><CR><Esc>jddkkPk<Esc>JJJ
+"nnoremap <C-I> i<CR><CR><Esc>jddkkPk<Esc>JJJ
 
 " Go to the previous buffer open
 nnoremap <leader>j :bp<cr>
@@ -245,7 +245,7 @@ nmap <silent><LEFT> :cprev<CR>
 nnoremap <leader>mi :PymodeRopeAutoImport<CR>
 "rename
 "nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-vnoremap <leader>mr :s//g<Left><Left>
+vnoremap <leader>mrr :s//g<Left><Left>
 " window keys
 nnoremap <leader>w< <c-w><
 nnoremap <leader>w> <c-w>>
