@@ -8,6 +8,7 @@ Plug 'romainl/Apprentice'
 Plug 'morhetz/gruvbox'
 Plug 'croaker/mustang-vim'
 Plug 'w0ng/vim-hybrid'
+Plug 'tpope/vim-rhubarb'
 
 " general
 Plug 'Valloric/YouCompleteMe'
