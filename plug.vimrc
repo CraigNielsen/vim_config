@@ -50,6 +50,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'scrooloose/nerdcommenter'
+Plug 'ivanov/vim-ipython'
 
 " eye candy
 Plug 'myusuf3/numbers.vim'
