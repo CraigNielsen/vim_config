@@ -20,7 +20,7 @@ Plug 'airblade/vim-rooter'
 Plug 'yegappan/mru'
 " Plug 'Shougo/deoplete.nvim'
 "
-Plug 'scrooloose/nerdtree',
+Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'isRuslan/vim-es6'
