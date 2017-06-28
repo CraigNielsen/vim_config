@@ -13,7 +13,7 @@ Plug 'tpope/vim-rhubarb'
 " general
 Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab'
-Plug 'benekastah/neomake'
+"Plug 'benekastah/neomake'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-rooter'
