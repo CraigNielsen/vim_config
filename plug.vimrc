@@ -30,6 +30,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-utils/vim-husk'
 
 " editing
+Plug 'w0rp/ale'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/ListToggle'
 Plug 'majutsushi/tagbar'
@@ -83,7 +84,7 @@ Plug 'elixir-lang/vim-elixir'
 "Plug 'nvie/vim-flake8'
 "Plug 'andviro/flake8-vim'
 Plug 'tell-k/vim-autopep8'
-Plug 'klen/python-mode'
+"Plug 'klen/python-mode'
 Plug 'davidhalter/jedi-vim'
 " other
 Plug 'mattn/emmet-vim'

@@ -18,6 +18,8 @@ let g:airline_theme = 'base16_pop'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'ρ'
@@ -39,7 +41,7 @@ let g:airline#extensions#promptline#enabled = 0
 let g:airline#extensions#syntastic#enabled  = 0
 let g:airline#extensions#taboo#enabled      = 0
 let g:airline#extensions#tagbar#enabled     = 0
-let g:airline#extensions#virtualenv#enabled = 0
+let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 
 " tmuxline config
