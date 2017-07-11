@@ -28,6 +28,13 @@ endif
    let g:fixmyjs_executable = $PWD .'/website-service/node_modules/.bin/eslint'
 endif
 
+let g:ale_fixers = {
+\   'python': [
+\       'autopep8',
+\       'isort',
+\       'yapf',
+\   ],
+\}
 
  if ($PWD == '/home/craig/git_repos/sandbox/crawler')
    echo "working in pwd: /home/craig/git_repos/sandbox/crawler"
@@ -41,7 +48,7 @@ autocmd FileType python set sts=4"
 "
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 " autopep8
-"let g:autopep8_ignore="E501"
+let g:autopep8_ignore="E501"
 " pymodelint:
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_on_write = 1
@@ -173,11 +180,13 @@ nmap <Leader>gs :Gstatus<CR>
 " craigs customs
 " l2 == leader2
 " l2 Test This
-map <leader>mtt :!/home/craig/vim_projects/testthis.sh %:p<CR>
-map <leader>mta :!/home/craig/vim_projects/testall.sh %:p<CR>
+"map <leader>mtt :!/home/craig/vim_projects/testthis.sh %:p<CR>
+  "map <leader>mta :!/home/craig/vim_projects/testall.sh %:p<CR>
 
 " hard mode config
 nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
+map <leader>mt <Esc>:ALENextWrap<CR>
+map <leader>my <Esc>:ALEPreviousWrap<CR>
 " dunder a word
 nnoremap <Leader>wd ciw__<Esc>pa__  <Esc>
 " first spell reccomended spelling next spelling fix
