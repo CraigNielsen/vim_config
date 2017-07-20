@@ -41,6 +41,8 @@ let g:airline#extensions#promptline#enabled = 0
 let g:airline#extensions#syntastic#enabled  = 0
 let g:airline#extensions#taboo#enabled      = 0
 let g:airline#extensions#tagbar#enabled     = 0
+let g:airline#extensions#gitgutter#enabled  = 1
+let g:airline#extensions#fugitive#enabled   = 1
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 
