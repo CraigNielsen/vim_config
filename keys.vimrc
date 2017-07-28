@@ -5,6 +5,8 @@ let g:jedi#force_py_version = 3
 "need to install an nvim with python 2 and python 3 for the aboce reason
 let g:python_host_prog = $HOME .'/.pyenv/versions/neovim2/bin/python'
 " neomake config
+  nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
 
 "autocmd! BufWritePost,BufEnter * Neomake
 
@@ -292,8 +294,8 @@ nnoremap <Leader><F5> :NERDTreeFind<CR>
 nnoremap <F7> :UndotreeToggle<CR>
 "nnoremap <F8> :Geeknote<CR>
 " indent whole file according to syntax rules
-noremap <F9> :PymodeLintAuto
-noremap <Leader><F9> gg=G<CR>
+"noremap <F9> :PymodeLintAuto
+"noremap <Leader><F9> gg=G<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo
 " so that you can undo CTRL-U after inserting a line break.
