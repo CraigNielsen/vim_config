@@ -32,7 +32,7 @@ set showcmd		" display incomplete commands
 "disable complettion previews
 set completeopt-=preview
 "if has('mouse')
-"  set mouse=a
+set mouse=r
 "endif
 
 if has("autocmd")
