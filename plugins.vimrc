@@ -1,18 +1,18 @@
 filetype plugin indent on
 
-let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
-let g:jedi#force_py_version = 3
+"let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
+"let g:jedi#force_py_version = 3
 "need to install an nvim with python 2 and python 3 for the aboce reason
-let g:python_host_prog = $HOME .'/.pyenv/versions/neovim2/bin/python'
+"let g:python_host_prog = $HOME .'/.pyenv/versions/neovim2/bin/python'
 " neomake config
-autocmd! BufWritePost,BufEnter * Neomake
+"autocmd! BufWritePost,BufEnter * Neomake
 " autocmd BufLeave * QFix let g:neomake_place_signs = 1 let g:neomake_open_list = 0
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
+"let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
 "
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
+"let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
  if ($PWD == '/home/craig/git_repos/psychicjenha')
    echo $PWD .'/frontend/node_modules/.bin/eslint'
