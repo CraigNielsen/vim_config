@@ -1,17 +1,17 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
-Plug 'junegunn/seoul256.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'goatslacker/mango.vim'
 Plug 'romainl/Apprentice'
+"Plug 'flipxfx/gruvbox-terminal'
 Plug 'morhetz/gruvbox'
 Plug 'croaker/mustang-vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-rhubarb'
 
 " general
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab'
 "Plug 'benekastah/neomake'
 Plug 'mileszs/ack.vim'
@@ -61,8 +61,8 @@ Plug 'lilydjwg/colorizer', { 'on': 'ColorToggle' }
 Plug 'wavded/vim-stylus'
 
 " javascript
-Plug 'maksimr/vim-jsbeautify'
-Plug 'ruanyl/vim-fixmyjs'
+"Plug 'maksimr/vim-jsbeautify'
+"Plug 'ruanyl/vim-fixmyjs'
 "Plug 'guileen/vim-node-dict'
 "Plug 'moll/vim-node'
 "Plug 'othree/yajs.vim'
@@ -73,8 +73,8 @@ Plug 'ruanyl/vim-fixmyjs'
 " Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 "Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 "Plug 'digitaltoad/vim-jade'
-Plug 'elzr/vim-json'
-Plug 'mxw/vim-jsx'
+"Plug 'elzr/vim-json'
+"Plug 'mxw/vim-jsx'
 "Plug 'posva/vim-vue'
 
 " elixir
@@ -85,7 +85,7 @@ Plug 'elixir-lang/vim-elixir'
 "Plug 'andviro/flake8-vim'
 Plug 'tell-k/vim-autopep8'
 "Plug 'klen/python-mode'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 " other
 Plug 'mattn/emmet-vim'
 Plug 'ciaranm/detectindent'
@@ -95,8 +95,11 @@ Plug 'othree/csscomplete.vim'
 Plug 'groenewege/vim-less'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sukima/xmledit'
+" Ruby
+Plug 'vim-ruby/vim-ruby'
 
 " text objects
+Plug 'plasticboy/vim-markdown'
 Plug 'wellle/targets.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'glts/vim-textobj-comment'

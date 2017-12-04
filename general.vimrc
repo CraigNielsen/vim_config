@@ -32,7 +32,12 @@ set showcmd		" display incomplete commands
 "disable complettion previews
 set completeopt-=preview
 "if has('mouse')
-set mouse=r
+set mouse=a
+if has("mouse_srg")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
 "endif
 
 if has("autocmd")
@@ -74,6 +79,8 @@ set nrformats-=octal
 set ttimeout
 set ttimeoutlen=0
 
+"detect ruby template
+autocmd BufNewFile,BufReadPost *.erb set filetype=ruby
 " detect .md as markdown instead of modula-2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "folding

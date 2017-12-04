@@ -16,19 +16,19 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " TODO: check if in project reps with find, then enable eslint
 "
 "let g:neomake_javascript_enabled_makers = ['eslint']
-"let g:neomake_jsx_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
 " TODO: check if in project reps with find, then enable eslint
- "if ($PWD == '/home/craig/git_repos/psychicjenha')
-   "echo $PWD .'/frontend/node_modules/.bin/eslint'
-   "let g:neomake_javascript_eslint_exe = $PWD .'/frontend/node_modules/.bin/eslint'
-   "let g:fixmyjs_executable = $PWD .'/frontend/node_modules/.bin/eslint'
-"endif
- "if ($PWD == '/home/craig/git_repos/reps')
-   "echo "working in pwd: /home/craig/git_repos/reps"
-   "echo $PWD .'/website-service/node_modules/.bin/eslint'
-   "let g:neomake_javascript_eslint_exe = $PWD .'/website-service/node_modules/.bin/eslint'
-   "let g:fixmyjs_executable = $PWD .'/website-service/node_modules/.bin/eslint'
-"endif
+ if ($PWD == '/home/craig/git_repos/psychicjenha')
+   echo $PWD .'/frontend/node_modules/.bin/eslint'
+   let g:neomake_javascript_eslint_exe = $PWD .'/frontend/node_modules/.bin/eslint'
+   let g:fixmyjs_executable = $PWD .'/frontend/node_modules/.bin/eslint'
+endif
+ if ($PWD == '/home/craig/git_repos/reps')
+   echo "working in pwd: /home/craig/git_repos/reps"
+   echo $PWD .'/website-service/node_modules/.bin/eslint'
+   let g:neomake_javascript_eslint_exe = $PWD .'/website-service/node_modules/.bin/eslint'
+   let g:fixmyjs_executable = $PWD .'/website-service/node_modules/.bin/eslint'
+endif
 
 let g:ale_fixers = {
 \   'python': [
@@ -103,6 +103,7 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
 let g:gruvbox_hls_cursor='orange'
 let g:gruvbox_invert_selection='orange'
+"colorscheme Apprentice
 
 " make background transparent
 " hi Normal ctermbg=NONE

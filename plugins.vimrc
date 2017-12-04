@@ -86,10 +86,10 @@ let g:buffergator_suppress_keymaps = 1
 set termguicolors
 set background=dark
 syntax enable
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_hls_cursor='orange'
-let g:gruvbox_invert_selection='orange'
+"colorscheme gruvbox
+"let g:gruvbox_contrast_dark='soft'
+"let g:gruvbox_hls_cursor='orange'
+"let g:gruvbox_invert_selection='orange'
 
 " make background transparent
 " hi Normal ctermbg=NONE
