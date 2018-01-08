@@ -11,7 +11,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-rhubarb'
 
 " general
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab'
 "Plug 'benekastah/neomake'
 Plug 'mileszs/ack.vim'
