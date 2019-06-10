@@ -5,7 +5,7 @@ filetype plugin indent on
 set hlsearch
 set spell spelllang=en_gb
 set number
-
+source /Users/craig.ferguson/.config/nvim/plugged/vim-ipython/ftplugin/python/ipy.vim
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -129,6 +129,6 @@ set hid " buffer becomes hidden when abandoned
 autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore "_"
 
 " clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 set completeopt=longest,menuone

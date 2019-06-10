@@ -183,13 +183,14 @@ nmap <Leader>gs :Gstatus<CR>
 " craigs customs
 " l2 == leader2
 " l2 Test This
-"map <leader>mtt :!/home/craig/vim_projects/testthis.sh %:p<CR>
-  "map <leader>mta :!/home/craig/vim_projects/testall.sh %:p<CR>
+map <leader>mta :!$HOME/vim_projects/testthis.sh %:p<CR>
+"map <leader>mtt :py3 << EOL
+"print("hello")
 
 " hard mode config
-nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
-map <leader>mt <Esc>:ALENextWrap<CR>
-map <leader>my <Esc>:ALEPreviousWrap<CR>
+nnoremap <leader>h <esc>:call togglehardmode()<cr>
+map <leader>mt <esc>:alenextwrap<cr>
+map <leader>my <esc>:alepreviouswrap<cr>
 " dunder a word
 nnoremap <Leader>wd ciw__<Esc>pa__  <Esc>
 " first spell reccomended spelling next spelling fix
@@ -402,5 +403,5 @@ autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 let g:gitgutter_max_signs=1200
 " colorizer
 nmap <Leader>tc :ColorToggle<CR>
-map <C-h> <C-W>h<C-W>_
+"map <C-h> <C-W>h<C-W>_
 

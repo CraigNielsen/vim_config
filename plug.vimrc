@@ -30,6 +30,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-utils/vim-husk'
 
 " editing
+"#
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'w0rp/ale'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/ListToggle'
@@ -99,7 +102,6 @@ Plug 'sukima/xmledit'
 Plug 'vim-ruby/vim-ruby'
 
 " text objects
-Plug 'plasticboy/vim-markdown'
 Plug 'wellle/targets.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'glts/vim-textobj-comment'
