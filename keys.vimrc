@@ -1,11 +1,12 @@
 filetype plugin indent on
 
-"let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
-"let g:jedi#force_py_version = 3
+let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
+let g:jedi#force_py_version = 3
 "need to install an nvim with python 2 and python 3 for the aboce reason
 "let g:python_host_prog = $HOME .'/.pyenv/versions/neovim2/bin/python'
 " neomake config
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+set encoding=utf-8
 
 
 "autocmd! BufWritePost,BufEnter * Neomake
@@ -234,6 +235,7 @@ let g:buffergator_sort_regime = "mru"
 "surrounding
 "nnoremap <Leader>sd vatc<div></div><Esc>cit<CR><CR><Esc>kP<C-i>
 nnoremap <Leader>sd vat:call UltiSnipsExpandTrigger()
+
 "insert next line into brackets
 "nnoremap <C-I> i<CR><CR><Esc>jddkkPk<Esc>JJJ
 
@@ -371,11 +373,19 @@ let g:ycm_key_list_previous_completion = ['<S-tab>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<tab>'
 
 
-let g:UltiSnipsExpandTrigger = "<C-j>"
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-b>"
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
-"let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
+"let g:UltiSnipsSnippetDirectories=['~/.vim/config/UltiSnips/']
+"let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/config/UltiSnips/'
+let g:UltiSnipsSnippetsDir = "~/.vim/config/UltiSnips"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/UltiSnips']
+let g:UltiSnipsExpandTrigger="jj"
+let g:UltiSnipsJumpForwardTrigger="<leader>j"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-h>"
+
+let g:ycm_complete_in_comments = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
 nnoremap <Leader>g :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>mg :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>r :YcmCompleter GoToReferences<CR>

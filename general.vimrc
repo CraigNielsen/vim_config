@@ -129,6 +129,6 @@ set hid " buffer becomes hidden when abandoned
 autocmd BufNewFile,BufRead,BufEnter *.md,*.markdown :syntax match markdownIgnore "_"
 
 " clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed "osx"
 
 set completeopt=longest,menuone

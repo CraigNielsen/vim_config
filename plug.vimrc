@@ -88,7 +88,7 @@ Plug 'elixir-lang/vim-elixir'
 "Plug 'andviro/flake8-vim'
 Plug 'tell-k/vim-autopep8'
 "Plug 'klen/python-mode'
-"Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 " other
 Plug 'mattn/emmet-vim'
 Plug 'ciaranm/detectindent'
