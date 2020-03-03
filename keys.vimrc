@@ -1,6 +1,7 @@
 filetype plugin indent on
 "Set <Leader>
-:let mapleader = ',,'
+:let mapleader = ','
+:let maplocalleader = ',,'
 
 let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
 let g:jedi#force_py_version = 3
@@ -372,18 +373,22 @@ let NERDTreeIgnore=['\.pyc$']
 " nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " you complete me
-let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<S-tab>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<tab>'
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
 
 "let g:UltiSnipsSnippetDirectories=['~/.vim/config/UltiSnips/']
 "let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/config/UltiSnips/'
-let g:UltiSnipsSnippetsDir = "~/.vim/config/UltiSnips"
+"let g:UltiSnipsSnippetsDir = "~/.vim/config/UltiSnips"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/UltiSnips']
-let g:UltiSnipsExpandTrigger="<Leader>j"
-let g:UltiSnipsJumpForwardTrigger="<Leader>j"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"let g:UltiSnipsExpandTrigger="<Leader>j"
+"let g:UltiSnipsJumpForwardTrigger="<Leader>j"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-h>"
 
 let g:ycm_complete_in_comments = 1
