@@ -1,4 +1,6 @@
 filetype plugin indent on
+"Set <Leader>
+:let mapleader = ',,'
 
 let g:python3_host_prog = $HOME .'/.pyenv/versions/neovim3/bin/python'
 let g:jedi#force_py_version = 3
@@ -44,6 +46,7 @@ let g:ale_fixers = {
    echo $PWD .'setting python to virtual python'
    let g:ycm_python_binary_path = 'home/craig/.pyenv/versions/3.4.3/envs/crawling/bin/python3.4'
 endif
+
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4"
@@ -81,11 +84,11 @@ let g:jedi#completions_enabled = 0
 let g:jedi#completions_command = ""
 let g:jedi#show_call_signatures = "1"
 
-let g:jedi#goto_assignments_command = "<leader>pa"
-let g:jedi#goto_definitions_command = "<leader>pd"
-let g:jedi#documentation_command = "<leader>pk"
-let g:jedi#usages_command = "<leader>gu"
-let g:jedi#rename_command = "<leader>mr"
+let g:jedi#goto_assignments_command = "<Leader>pa"
+let g:jedi#goto_definitions_command = "<Leader>pd"
+let g:jedi#documentation_command = "<Leader>pk"
+let g:jedi#usages_command = "<Leader>gu"
+let g:jedi#rename_command = "<Leader>mr"
 " ycm strings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " silver searcher
@@ -172,26 +175,25 @@ let g:colorizer_nomap = 1
 " emmet-vim settings
 " let g:user_emmet_settings = { "html": { "quote_char": "'"} }
 " map Leader
-let mapleader = ","
 " keep backward f search, remapping it to ,;
 nnoremap <Leader>; ,
 
 " in-line scrolling
-nmap <Leader>j gj
-nmap <Leader>k gk
+"nmap <Leader>j gj
+"nmap <Leader>k gk
 " vim fugitive
 nmap <Leader>gs :Gstatus<CR>
 " craigs customs
 " l2 == leader2
 " l2 Test This
-map <leader>mta :!$HOME/vim_projects/testthis.sh %:p<CR>
-"map <leader>mtt :py3 << EOL
+map <Leader>mta :!$HOME/vim_projects/testthis.sh %:p<CR>
+"map <Leader>mtt :py3 << EOL
 "print("hello")
 
 " hard mode config
-nnoremap <leader>h <esc>:call togglehardmode()<cr>
-map <leader>mt <esc>:alenextwrap<cr>
-map <leader>my <esc>:alepreviouswrap<cr>
+nnoremap <Leader>h <esc>:call togglehardmode()<cr>
+map <Leader>mt <esc>:alenextwrap<cr>
+map <Leader>my <esc>:alepreviouswrap<cr>
 " dunder a word
 nnoremap <Leader>wd ciw__<Esc>pa__  <Esc>
 " first spell reccomended spelling next spelling fix
@@ -240,43 +242,43 @@ nnoremap <Leader>sd vat:call UltiSnipsExpandTrigger()
 "nnoremap <C-I> i<CR><CR><Esc>jddkkPk<Esc>JJJ
 
 " Go to the previous buffer open
-nnoremap <leader>j :bp<cr>
-nnoremap <leader>bp :BuffergatorMruCyclePrev<cr>
+"nnoremap <Leader>j :bp<cr>
+"nnoremap <Leader>bp :BuffergatorMruCyclePrev<cr>
 " Go to the next buffer open
-nnoremap <leader>k :bn<cr>
-nnoremap <leader>bn :BuffergatorMruCycleNext<cr>
+nnoremap <Leader>k :bn<cr>
+nnoremap <Leader>bn :BuffergatorMruCycleNext<cr>
 " View the entire list of buffers open
-nnoremap <leader>bl :BuffergatorOpen<cr>
+nnoremap <Leader>bl :BuffergatorOpen<cr>
 " To open a new empty buffer
-nnoremap <leader>T :enew<cr>
-nnoremap <leader>mo :MRU<cr>
+nnoremap <Leader>T :enew<cr>
+nnoremap <Leader>mo :MRU<cr>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nnoremap <leader>bq :bp <BAR> bd #<cr>
+nnoremap <Leader>bq :bp <BAR> bd #<cr>
 
 "toggle location lists etc
-let g:lt_location_list_toggle_map = '<leader>c'
-let g:lt_quickfix_list_toggle_map = '<leader>v'
+let g:lt_location_list_toggle_map = '<Leader>c'
+let g:lt_quickfix_list_toggle_map = '<Leader>v'
 
 nnoremap <silent><F3> :Ack!<CR>
 nmap <silent><RIGHT> :cnext<CR>
 nmap <silent><LEFT> :cprev<CR>
 
 "import
-nnoremap <leader>mi :PymodeRopeAutoImport<CR>
+nnoremap <Leader>mi :PymodeRopeAutoImport<CR>
 "rename
 "nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-vnoremap <leader>mrr :s//g<Left><Left>
+vnoremap <Leader>mrr :s//g<Left><Left>
 " window keys
-nnoremap <leader>w< <c-w><
-nnoremap <leader>w> <c-w>>
-nnoremap <leader>w- <c-w>-
-nnoremap <leader>w+ <c-w>+
-nnoremap <leader>ws :split<cr>
-nnoremap <leader>wv :vsplit<cr>
-nnoremap <leader>q :close<cr>
+nnoremap <Leader>w< <c-w><
+nnoremap <Leader>w> <c-w>>
+nnoremap <Leader>w- <c-w>-
+nnoremap <Leader>w+ <c-w>+
+nnoremap <Leader>ws :split<cr>
+nnoremap <Leader>wv :vsplit<cr>
+nnoremap <Leader>q :close<cr>
 
-nnoremap <leader>w <c-w>
+nnoremap <Leader>w <c-w>
 
 " %% to expand active buffer location on cmdline
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -330,6 +332,8 @@ set showmode
 " allow ,, for vimsneak
 nmap <Leader>, <Plug>SneakPrevious
 
+imap <Leader>k <Plug>IMAP_JumpForward
+
 " camelCase motion settings
 "map <silent> w <Plug>CamelCaseMotion_w
 "map <silent> b <Plug>CamelCaseMotion_b
@@ -377,8 +381,8 @@ let g:SuperTabDefaultCompletionType = '<tab>'
 "let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/config/UltiSnips/'
 let g:UltiSnipsSnippetsDir = "~/.vim/config/UltiSnips"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/config/UltiSnips']
-let g:UltiSnipsExpandTrigger="jj"
-let g:UltiSnipsJumpForwardTrigger="<leader>j"
+let g:UltiSnipsExpandTrigger="<Leader>j"
+let g:UltiSnipsJumpForwardTrigger="<Leader>j"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-h>"
 

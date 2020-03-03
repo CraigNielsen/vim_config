@@ -31,6 +31,7 @@ Plug 'vim-utils/vim-husk'
 
 " editing
 "#
+Plug 'vim-latex/vim-latex'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'w0rp/ale'

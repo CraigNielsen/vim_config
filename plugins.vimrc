@@ -33,6 +33,9 @@ endif
    echo $PWD .'setting python to virtual python'
    let g:ycm_python_binary_path = 'home/craig/.pyenv/versions/3.4.3/envs/crawling/bin/python3.4'
 endif
+" LATEX
+let g:tex_flavor='latex'
+"let b:suppress_latex_suite = 1
 " auto close tags
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 " autopep8
@@ -67,11 +70,11 @@ let g:jedi#completions_enabled = 0
 let g:jedi#completions_command = ""
 let g:jedi#show_call_signatures = "1"
 
-let g:jedi#goto_assignments_command = "<leader>pa"
-let g:jedi#goto_definitions_command = "<leader>pd"
-let g:jedi#documentation_command = "<leader>pk"
-let g:jedi#usages_command = "<leader>pu"
-let g:jedi#rename_command = "<leader>mr"
+let g:jedi#goto_assignments_command = "<Leader>pa"
+let g:jedi#goto_definitions_command = "<Leader>pd"
+let g:jedi#documentation_command = "<Leader>pk"
+let g:jedi#usages_command = "<Leader>pu"
+let g:jedi#rename_command = "<Leader>mr"
 " ycm strings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " silver searcher
